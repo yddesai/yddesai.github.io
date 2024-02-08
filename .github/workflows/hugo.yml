@@ -25,7 +25,7 @@ jobs:
         hugo-version: 'latest'  # You can specify a specific Hugo version if needed
 
     - name: Build
-      run: hugo
+      run: hugo server -D
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3

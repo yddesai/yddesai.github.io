@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yugandhar Desai&#39;s Website</title>
+    
+    
+    
+    <link>https://yugi1729.github.io/</link>
+    <description>Recent content on Yugandhar Desai&#39;s Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 07 Feb 2024 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://yugi1729.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://yugi1729.github.io/about/</link>
+      <pubDate>Wed, 07 Feb 2024 12:00:00 +0530</pubDate>
+      
+      <guid>https://yugi1729.github.io/about/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Hello there 👋 # I&amp;rsquo;m Yugandhar Desai, a passionate Graduate Student based in Santa Clara, CA. Here&amp;rsquo;s a glimpse into my professional journey:
+Education # &amp;lt; img src=&amp;quot;/SCU.png&amp;quot; alt=&amp;ldquo;SCU logo&amp;rdquo; position=&amp;ldquo;left&amp;rdquo; style=&amp;quot; max-width: 8%;&amp;quot; &amp;gt;
+MS in Computer Science
+Santa Clara University
+Sep. 2023 – June 2025
+Santa Clara, CA GPA: 3.85/4.0 &amp;lt; img src=&amp;quot;/NU-logo.png&amp;quot; alt=&amp;ldquo;NU logo&amp;rdquo; position=&amp;ldquo;left&amp;rdquo; style=&amp;ldquo;max-width: 7%;&amp;rdquo; &amp;gt;
+BTech in Computer Science &amp;amp; Engineering
+NIIT University
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://yugi1729.github.io/post/hellloworld/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://yugi1729.github.io/post/hellloworld/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          ...
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Tech Stack</title>
+      <link>https://yugi1729.github.io/software-i-use/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://yugi1729.github.io/software-i-use/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Some Languages / tools I am familiar with: # &lt;!DOCTYPE html&gt; Languages Python C++ Go JavaScript SQL C Swift Bash HTML5 CSS Frameworks Django Flask FastAPI NodeJS ExpressJS Containerization Docker Kubernetes Databases SQLite MongoDB Microsoft SQL Server MySQL Operating Systems Fedora Linux Manjaro Ubuntu Version Control Git Data Engineering Apache Airflow dbt Matillion Snowflake &lt;!DOCTYPE html&gt; Operating System and Tools Operating System Fedora Currently I am using Fedora 39 with Gnome DE.
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://yugi1729.github.io/home/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yugi1729.github.io/home/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          [types] home = &amp;ldquo;content/home&amp;rdquo;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://yugi1729.github.io/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yugi1729.github.io/projects/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Projects # Literature Research Tool | Python, Flask, JavaScript, Bash, HTML, CSS
+Mar. 2023
+Developed a full-stack web application for academic literature research using Python and the Flask framework. Used web scraping to gather academic article information from Google Scholar, ACM, Semantic Scholar, and various conference websites. GRAS - Git Repositories Archiving Service | Python, Java, ANTLR, JavaScript
+Apr. 2020
+GRAS is an interactive CLI tool capable of mining data from VCS, JIRA, and Pipermail.
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://yugi1729.github.io/publications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yugi1729.github.io/publications/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Publication # Studying Multifaceted Collaboration of OSS developers and its impact on their bug fixing performance pdf
+Asia-Pacific Software Engineering Conference (W) 2019
+Abstract—Developers often collaborate to fix complex bugs, even in open source software systems (OSS) where collaboration largely occurs through discussions in the bug tracker. The implicit Developer Social Networks (DSN) are created as a result of these discussions. Past research has investigated the usefulness of such DSNs in addressing many Software Engineering problems (e.
+          
+        
+        </description>
+    </item>
+    
+  </channel>
+</rss>
