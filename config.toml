@@ -1,4 +1,4 @@
-baseURL="/"
+baseURL="https://yugi1729.github.io"
 languageCode = "en-us"
 # Add it only if you keep the theme in the `themes` directory.
 # Remove it if you use the theme as a remote Hugo Module.
@@ -29,7 +29,11 @@ paginate = 5
     isPlainText = false
     notAlternative = true
 
+[taxonomies]
+  tag      = "tags"
+  category = "categories"
 
+  
   # Show reading time in minutes for posts
   showReadingTime = true
 
