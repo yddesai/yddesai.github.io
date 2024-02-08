@@ -40,8 +40,8 @@ jobs:
         run: sudo snap install dart-sass
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          submodules: recursive
+        
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
@@ -55,7 +55,8 @@ jobs:
         run: |
           hugo \
             --minify \
-      
+      - name: Clear Hugo cache
+        run: rm -rf ${{ runner.workspace }}/public
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
