@@ -3,7 +3,7 @@ name: Hugo Build and Deploy
 on:
   push:
     branches:
-      - main  # Adjust this according to your main branch name
+      - master  # Adjust this according to your main branch name
 
 jobs:
   build:
@@ -25,5 +25,5 @@ jobs:
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
-        personal_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./public
+        personal_token: ${{ secrets.GH_PAGES_TOKEN }}
+        publish_branch: master
