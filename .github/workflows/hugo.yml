@@ -1,5 +1,10 @@
 name: Hugo Build and Deploy
 
+permissions:
+  pull-requests: write
+  issues: write
+  repository-projects: write
+
 on:
   push:
     branches:
