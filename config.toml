@@ -1,4 +1,4 @@
-baseURL="https://yugi1729.github.io"
+baseurl="https://yugi1729.github.io"
 languageCode = "en-us"
 # Add it only if you keep the theme in the `themes` directory.
 # Remove it if you use the theme as a remote Hugo Module.
@@ -18,16 +18,6 @@ paginate = 5
   # OS theme is default when not provided, but you can force it to "light" or "dark"
   defaultTheme = "light"
 
-[mediaTypes]
- [mediaTypes."text/html"]
-    suffixes = ["html"]
-
-[outputFormats]
-  [outputFormats.HTML]
-    mediaType = "text/html"
-    baseName = "/"
-    isPlainText = false
-    notAlternative = true
 
 [taxonomies]
   tag      = "tags"
