@@ -1,0 +1,87 @@
+{{ define "main" }}
+  {{ $isntDefault := not (or (eq (trim $.Site.Params.contentTypeName " ") "posts") (eq (trim $.Site.Params.contentTypeName " ") "")) }}
+  {{ $contentTypeName := cond $isntDefault (string $.Site.Params.contentTypeName) "posts" }}
+
+  {{ $PageContext := . }}
+  {{ if .IsHome }}
+    {{ $PageContext = .Site }}
+  {{ end }}
+  {{ $paginator := .Paginate (where $PageContext.RegularPages "Type" $contentTypeName) }}
+
+  {{ if .Content }}
+    <div class="index-content {{ if .Params.framed -}}framed{{- end -}}">
+      {{ .Content }}
+    </div>
+  {{ end }}
+
+  <div class="intro" style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+    <h1>Hi, There 👋</h1>
+    <h2> My name is Yugandhar Desai </h2>
+    <h3> I am a Computer Science Grad Student at Santa Clara University </h3>
+    <img src="/golden-gate.jpg" alt="Golden Gate Bridge" style="max-width: 40%; margin: 0 auto; display: block;"/>
+  </div>
+
+  <div style="margin: 0 auto; width: 50%;">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet consectetur adipiscing elit ut aliquam purus sit amet. 
+  Risus pretium quam vulputate dignissim. Nunc pulvinar sapien et ligula ullamcorper malesuada. Faucibus turpis in eu mi bibendum neque. Quisque sagittis purus sit amet volutpat consequat mauris nunc congue. 
+  Vitae elementum curabitur vitae nunc sed velit dignissim sodales. Etiam non quam lacus suspendisse. Nibh tellus molestie nunc non blandit massa enim nec. Id semper risus in hendrerit gravida rutrum quisque. 
+  Ullamcorper a lacus vestibulum sed arcu non odio. Vitae et leo duis ut diam quam. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate. Ut porttitor leo a diam sollicitudin tempor id. 
+  Leo a diam sollicitudin tempor id eu nisl nunc. Posuere sollicitudin aliquam ultrices sagittis. At erat pellentesque adipiscing commodo. Ac tortor dignissim convallis aenean et tortor at. 
+  Aliquam nulla facilisi cras fermentum odio eu feugiat pretium nibh. 
+  Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat.
+
+  </div>
+
+  <div class="posts">
+    {{ range $paginator.Pages }}
+    <article class="post on-list">
+      <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h1>
+      <div class="post-meta">
+        {{ if .Date }}
+          <time class="post-date">
+            {{ .Date.Format ($.Site.Params.DateFormatList | default "2006-01-02") }}
+          </time>
+
+          {{ if $.Site.Params.LastModDisplay }}
+            {{ partial "lastmod.html" . }}
+          {{ end }}
+        {{ end }}
+
+        {{ with .Params.Author }}
+          <span class="post-author">— {{ $.Site.Params.WrittenBy | default "Written by" }} {{ . }}</span>
+        {{ end }}
+
+        {{ if $.Site.Params.ShowReadingTime }}
+          <span class="post-read-time">— {{ .ReadingTime }} {{ $.Site.Params.MinuteReadingTime | default "min read" }}</span>
+        {{ end }}
+      </div>
+
+      {{ if .Params.tags }}
+        <span class="post-tags">
+          {{ range .Params.tags }}
+            <a href="{{ (urlize (printf "tags/%s" . )) | absLangURL }}/">#{{ . }}</a>&nbsp;
+          {{ end }}
+        </span>
+      {{ end }}
+
+      {{ if .Params.Cover }}
+        {{ partial "postcover.html" . }}
+      {{ end }}
+
+      <div class="post-content">
+        {{ with .Description }}
+          {{ . | markdownify }}
+        {{ else }}
+          {{ if .Truncated }}
+            {{ .Summary }}
+          {{ end }}
+        {{ end }}
+      </div>
+      {{ if not .Params.hideReadMore }}
+        <div><a class="read-more button" href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore | default "Read more" }} →</a></div>
+      {{ end }}
+    </article>
+    {{ end }}
+    {{ partial "pagination.html" . }}
+  </div>
+{{ end }}

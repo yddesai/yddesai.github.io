@@ -1,0 +1,94 @@
+baseurl="https://yugi1729.github.io"
+languageCode = "en-us"
+# Add it only if you keep the theme in the `themes` directory.
+# Remove it if you use the theme as a remote Hugo Module.
+theme = "hello-friend"
+paginate = 5
+[module]
+  [[module.imports]]
+    disable = false
+
+[markup.goldmark.renderer]
+  unsafe= true
+[params]
+  # dir name of your blog content (default is `content/posts`).
+  # the list of set content will show up on your index page (baseurl).
+  contentTypeName = "posts"
+
+  # OS theme is default when not provided, but you can force it to "light" or "dark"
+  defaultTheme = "light"
+
+
+
+  # Show reading time in minutes for posts
+  showReadingTime = true
+
+  # Show table of contents at the top of your posts (defaults to false)
+  # Alternatively, add this param to post front matter for specific posts
+  # toc = true
+
+  # Show full page content in RSS feed items
+  #(default is Description or Summary metadata in the front matter)
+  # rssFullText = true
+
+[languages]
+  [languages.en]
+    title = "Yugandhar Desai's Website"
+    subtitle = ""
+    keywords = ""
+    copyright = ""
+    menuMore = "Show more"
+    writtenBy = "Written by"
+    readMore = "Read more"
+    readOtherPosts = "Read other posts"
+    newerPosts = "Newer posts"
+    olderPosts = "Older posts"
+    minuteReadingTime = "min read"
+    dateFormatSingle = "01-02-2006"
+    dateFormatList = "01-02-2006"
+    # leave empty to disable, enter display text to enable
+    # lastModDisplay = ""
+
+    [languages.en.params.logo]
+      logoText = "cd ~/home"
+      logoHomeLink = "/"
+    # or
+    #
+    # alt = "Your example logo alt text"
+
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about"
+    
+      [[languages.en.menu.main]]
+      identifier="Software"
+      name = "Software"
+      url = "/software-i-use"
+
+      [[languages.en.menu.main]]
+      identifier="Projects"
+      name = "Projects"
+      url = "/projects"
+
+      [[languages.en.menu.main]]
+      identifier="Resume"
+      name = "Resume"
+      url = "/ydesai_resume-8.pdf"
+
+      [[languages.en.menu.main]]
+      identifier="Publications"
+      name="Publications"
+      url="/publications"
+
+      [[languages.en.menu.main]]
+      identifier="Posts"
+      name = "Posts"
+      url = "/post"
+
+      [[languages.en.menu.main]]
+      identifier="Tags"
+      name = "Tags"
+      url = "/tags"
+
