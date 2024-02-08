@@ -18,7 +18,16 @@ paginate = 5
   # OS theme is default when not provided, but you can force it to "light" or "dark"
   defaultTheme = "light"
 
+[mediaTypes]
+ [mediaTypes."text/html"]
+    suffixes = ["html"]
 
+[outputFormats]
+  [outputFormats.HTML]
+    mediaType = "text/html"
+    baseName = "index"
+    isPlainText = false
+    notAlternative = true
 
   # Show reading time in minutes for posts
   showReadingTime = true

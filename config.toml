@@ -1,4 +1,4 @@
-baseurl="https://yugi1729.github.io"
+baseUrl="https://yugi1729.github.io"
 languageCode = "en-us"
 # Add it only if you keep the theme in the `themes` directory.
 # Remove it if you use the theme as a remote Hugo Module.
@@ -12,12 +12,22 @@ paginate = 5
   unsafe= true
 [params]
   # dir name of your blog content (default is `content/posts`).
-  # the list of set content will show up on your index page (baseurl).
+  # the list of set content will show up on your index page (baseURL).
   contentTypeName = "posts"
 
   # OS theme is default when not provided, but you can force it to "light" or "dark"
   defaultTheme = "light"
 
+[mediaTypes]
+ [mediaTypes."text/html"]
+    suffixes = ["html"]
+
+[outputFormats]
+  [outputFormats.HTML]
+    mediaType = "text/html"
+    baseName = "index"
+    isPlainText = false
+    notAlternative = true
 
 
   # Show reading time in minutes for posts
