@@ -11,21 +11,21 @@ draft = false
 I'm Yugandhar Desai, a passionate Graduate Student based in Santa Clara, CA. Here's a glimpse into my professional journey:
 
 ### Education
-{{< image src="/SCU.png" alt="SCU logo" position="left" style=" max-width: 8%;" >}} 
+< img src="/SCU.png" alt="SCU logo" position="left" style=" max-width: 8%;" >
 - **MS in Computer Science**  
   *Santa Clara University*  
   Sep. 2023 – June 2025  
   Santa Clara, CA
   - GPA: 3.85/4.0
 
-{{< image src="/NU-logo.png" alt="NU logo" position="left" style="max-width: 7%;" >}}
+< img src="/NU-logo.png" alt="NU logo" position="left" style="max-width: 7%;" >
 - **BTech in Computer Science & Engineering**  
   *NIIT University*  
   Aug. 2017 – Aug. 2021  
   Rajasthan, India
 
 ### Work Experience
-{{< image src="/ntt-data.png" alt="NTT Data Logo" position="left" style="border-radius: 2px; max-width: 14%;" >}} 
+< img src="/ntt-data.png" alt="NTT Data Logo" position="left" style="border-radius: 2px; max-width: 14%;" > 
 - **NTT Data**  
   *Software Engineer*  
   Aug, 2021 – Apr, 2022  
@@ -34,7 +34,7 @@ I'm Yugandhar Desai, a passionate Graduate Student based in Santa Clara, CA. Her
   - Automated job scheduling process using Python & Matillion workflows, resulting in a 40% reduction in overall processing time.
   - Designed and developed data models in Snowflake to support business intelligence and reporting needs.
 
-{{< image src="/symphony-fintech.png" alt="Symphony Fintech Logo" position="left" style="border-radius: 2px; max-width: 16%;" >}}
+< img src="/symphony-fintech.png" alt="Symphony Fintech Logo" position="left" style="border-radius: 2px; max-width: 16%;" >
 
 - **Symphony Fintech**  
  *Software Engineer*  
