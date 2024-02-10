@@ -31,7 +31,7 @@ I'm Yugandhar Desai, a passionate Graduate Student based in Santa Clara, CA. Her
 
 - **NTT Data**  
   *Software Engineer*  
-  Aug, 2021 – Apr, 2022  
+  Aug, 2021 – Apr, 2023
   Pune, India  
   - Implemented, maintained & deployed ETL/ELT pipelines.
   - Automated job scheduling process using Python & Matillion workflows, resulting in a 40% reduction in overall processing time.
