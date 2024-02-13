@@ -78,7 +78,7 @@ paginate = 5
       [[languages.en.menu.main]]
       identifier="Resume"
       name = "Resume"
-      url = "/ydesai_resume-8.pdf"
+      url = "/resume.pdf"
 
       [[languages.en.menu.main]]
       identifier="Publications"
