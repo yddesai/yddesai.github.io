@@ -47,6 +47,10 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+        
+      - name: Clear Hugo cache
+        run: rm -rf ${{ runner.workspace }}/public
+        
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
@@ -55,8 +59,7 @@ jobs:
         run: |
           hugo \
             --minify \
-      - name: Clear Hugo cache
-        run: rm -rf ${{ runner.workspace }}/public
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
