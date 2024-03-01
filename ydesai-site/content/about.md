@@ -4,11 +4,11 @@ date = "2024-02-07T12:00:00+05:30"
 draft = false
 +++
 <!-- round profile avatar -->
-<img src="/wave.jpg" alt="wave" style="border-radius: 100%; max-width: 25%; align-self: right; margin-right: 10px;">
+<!-- <img src="/photo.jpeg" alt="wave" style="border-radius: 100%; max-width: 25%; align-self: right; margin-right: 10px;"> -->
 
 ## Hello there 👋
 
-I'm Yugandhar Desai, a passionate Graduate Student based in Santa Clara, CA. Here's a glimpse into my professional journey:
+I'm Yugandhar Desai, a passionate Graduate Student based in Santa Clara, CA. Here's a glimpse into my professional journey:    
 
 ### Education
 <img src="/SCU.png" alt="SCU logo" position="left" style="max-width: 8%;" >

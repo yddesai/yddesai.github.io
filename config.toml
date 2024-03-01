@@ -35,6 +35,9 @@ paginate = 5
   #(default is Description or Summary metadata in the front matter)
   # rssFullText = true
 
+PygmentsCodeFences = true
+PygmentsStyle = "github-dark"
+
 [languages]
   [languages.en]
     title = "Yugandhar Desai's Website"
@@ -89,7 +92,7 @@ paginate = 5
       [[languages.en.menu.main]]
       identifier="Posts"
       name = "Posts"
-      url = "/post"
+      url = "/posts"
 
       [[languages.en.menu.main]]
       identifier="Tags"
