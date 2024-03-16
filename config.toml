@@ -82,7 +82,7 @@ PygmentsStyle = "github-dark"
       [[languages.en.menu.main]]
       identifier="Resume"
       name = "Resume"
-      url = "/resume.pdf"
+      url = "/ydesai_resume.pdf"
 
       [[languages.en.menu.main]]
       identifier="Publications"
