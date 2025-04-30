@@ -1,13 +1,438 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="profile">
+                <div class="profile-img">
+                    <img src="assets/profile.jpeg" alt="Profile Picture" style="transform: scale(2.5);">
+                </div>
+                <h1>Yugandhar Desai</h1>
+                <p class="title" style="font-size: 0.8rem;">MS in Computer Science | Aspiring Software Engineer </p>
+                
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>yugandhar.d.desai@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+1 408-690-9335</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Santa Clara, CA</span>
+                    </div>
+                </div>
+
+                <a href="./pdf/ydesai-resume.pdf" download class="download-resume">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/yugandhar-desai" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/yddesai" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com/yugandhardesai" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="#about" class="active">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </ul>
+            </nav>
+
+            <!-- About Section -->
+            <section id="about" class="section active" style="margin-top: -30px;">
+                <h2>About Me</h2>
+                <p>I'm an aspiring software engineer with 2+ years of experience in software development and data engineering. I'm currently pursuing my Master's in Computer Science at Santa Clara University. I'm interested in backend development, AI and distributed systems. Looking for opportunities in software development and data engineering.</p>
+                <!-- <p>I'm a passionate Full Stack Developer with expertise in building modern web applications. With a strong foundation in both frontend and backend technologies, I create efficient, scalable, and user-friendly solutions.</p> -->
+                
+                <!-- <div class="skills">
+                    <h3>Tech Stack</h3>
+                    <div class="tech-icons">
+                        <i class="fab fa-react" title="React"></i>
+                        <i class="fab fa-node-js" title="Node.js"></i>
+                        <i class="fab fa-js" title="JavaScript"></i>
+                        <i class="fab fa-docker" title="Docker"></i>
+                        <i class="fab fa-aws" title="AWS"></i>
+                    </div>
+                </div> -->
+                <br>
+                <br>
+                <!-- Include the library. -->
+                <div class="github-heatmap">
+                    <h3 class="github-heatmap-title">GitHub Contributions</h3>
+                    <div class="heatmap-container">
+                        <img src="https://ghchart.rshah.org/yddesai?theme=dark" alt="GitHub Contributions Heatmap" class="github-contributions">
+                    </div>
+                </div> 
+             
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="section" style="margin-top: -30px;">
+                <h2>Experience</h2>
+                
+                <div class="resume-section">
+                    <h3><i class="fas fa-briefcase"></i> Work Experience</h3>
+                    <div class="experience-item">
+                        <div class="company-header">
+                            <img src="https://mms.businesswire.com/media/20240110676731/en/1655864/5/NineDot_Energy_Logo_Stacked_Full_Color.jpg?download=1" alt="Ninedot Energy Logo" class="company-logo"  style="width: 60px; height: 60px; object-fit: contain;">
+                            <div class="company-info">
+                                <div class="date">Jun 2024 – Aug 2024</div>
+                                <div class="position">Data Engineer Intern</div>
+                                <div class="company">Ninedot Energy</div>
+                                <div class="location">Boston, MA</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="company-header">
+                            <img src="https://www.nashvillechamber.com/wp-content/uploads/2024/01/NTT-DATA-Logo-HumanBlue.png" alt="NTT Data Logo" class="company-logo" style="width: 60px; height: 60px; object-fit: contain;">
+                            <div class="company-info">
+                                <div class="date">Aug 2021 – April 2023</div>
+                                <div class="position">Cloud Engineer</div>
+                                <div class="company">NTT Data</div>
+                                <div class="location">Mumbai, India</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="company-header">
+                            <img src="https://symphonyfintech.com/wp-content/uploads/2019/03/02.png" alt="Symphony Fintech Logo" class="company-logo" style="width: 60px; height: 60px; object-fit: contain;">
+                            <div class="company-info">
+                                <div class="date">Jan 2021 – July 2021</div>
+                                <div class="position">Software Developer Intern</div>
+                                <div class="company">Symphony Fintech</div>
+                                <div class="location">Mumbai, India</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="section">
+                <h2>Education</h2>
+                <div class="resume-section">
+                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <div class="education-item">
+                        <div class="date">Sep 2023 – June 2025</div>
+                        <div class="institution">Santa Clara University</div>
+                        <div class="degree">MS in Computer Science</div>
+                    </div>
+                    <div class="education-item">
+                        <div class="date">Aug 2017 – Aug 2021</div>
+                        <div class="institution">NIIT University</div>
+                        <div class="degree">BTech in Computer Science & Engineering</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="section" style="margin-top: -30px;">
+                <h2>My Skills</h2>
+                <div class="skills-container" style="margin-top: -20px;">
+        
+                    <h3>Languages</h3>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/Python.png" alt="Python" class="skill-icon" />
+                        <span class="skill-name">Python</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/C%2B%2B.png" alt="C++" class="skill-icon" />
+                        <span class="skill-name">C++</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/Go.png" alt="Go" class="skill-icon" />
+                        <span class="skill-name">Go</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/JavaScript.jpeg" alt="JavaScript" class="skill-icon" />
+                        <span class="skill-name">JavaScript</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/SQL_1637837190537.png" alt="SQL" class="skill-icon" />
+                        <span class="skill-name">SQL</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/C.png" alt="C" class="skill-icon" />
+                        <span class="skill-name">C</span>
+                    </div>
+                    <!-- <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/Swift.png" alt="Swift" class="skill-icon" />
+                        <span class="skill-name">Swift</span>
+                    </div> -->
+                    <div class="skill">
+                       <img src="https://stack-icons.showwcase.com/GNUBash.png" alt="Bash"
+                       class="skill-icon">
+                       <span class="skill-name">Bash</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/ZshZshell.png" alt="Zsh (Z shell)" class="skill-icon" />
+                        <span class="skill-name">Zsh (Z shell)</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/HTML5.png" alt="HTML5" class="skill-icon" />
+                        <span class="skill-name">HTML5</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/CSS_1635322912032.png" alt="CSS" class="skill-icon" />
+                        <span class="skill-name">CSS</span>
+                    </div>
+                    
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/Django.png" alt="Django" class="skill-icon" />
+                        <span class="skill-name">Django</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/Flask.png" alt="Flask" class="skill-icon" />
+                        <span class="skill-name">Flask</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/FastAPI_1666693947305.png" alt="FastAPI" class="skill-icon" />
+                        <span class="skill-name">FastAPI</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/Nodejs.png" alt="Node.js" class="skill-icon" />
+                        <span class="skill-name">NodeJS</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/expressjs.png" alt="ExpressJS" class="skill-icon" />
+                        <span class="skill-name">ExpressJS</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/OpenCV.png" alt="OpenCV" class="skill-icon" />
+                        <span class="skill-name">OpenCV</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/NumPy.jpeg" alt="Numpy" class="skill-icon" />
+                        <span class="skill-name">Numpy</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/Pandas.png" alt="Pandas" class="skill-icon" />
+                        <span class="skill-name">Pandas</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/PySpark.jpg" alt="PySpark" class="skill-icon" />
+                        <span class="skill-name">PySpark</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/Airflow.png" alt="Apache Airflow" class="skill-icon" />
+                        <span class="skill-name">Apache Airflow</span>
+                    </div>
+
+                    <h3>Data Engineering</h3>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/Snowflake.png" alt="Snowflake" class="skill-icon" />
+                        <span class="skill-name">Snowflake</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/dbt.png" alt="dbt" class="skill-icon" />
+                        <span class="skill-name">dbt</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/Matillion.jpg" alt="Matillion" class="skill-icon" />
+                        <span class="skill-name">Matillion</span>
+                    </div>
+
+                    <h3>Containerization</h3>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/Docker.png" alt="Docker" class="skill-icon" />
+                        <span class="skill-name">Docker</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/Kubernetes.png" alt="Kubernetes" class="skill-icon" />
+                        <span class="skill-name">Kubernetes</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/QEMU.png" alt="QEMU" class="skill-icon" />
+                        <span class="skill-name">QEMU</span>
+                    </div>
+                    
+                    <h3>Databases & Datawarehouses</h3>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/SQLite.png" alt="SQLite" class="skill-icon" />
+                        <span class="skill-name">SQLite</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/MongoDB.png" alt="MongoDB" class="skill-icon" />
+                        <span class="skill-name">MongoDB</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/MicrosoftSQL.png" alt="Microsoft SQL Server" class="skill-icon" />
+                        <span class="skill-name">Microsoft SQL Server</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/MySQL.png" alt="MySQL" class="skill-icon" />
+                        <span class="skill-name">MySQL</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/Snowflake.png" alt="Snowflake" class="skill-icon" />
+                        <span class="skill-name">Snowflake</span>
+                    </div>
+                    <!-- <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/AzureSQL.png" alt="Azure SQL Database" class="skill-icon" />
+                        <span class="skill-name">Azure SQL Database</span>
+                    </div> -->
+
+                    <h3>Development Tools</h3>
+                    <!-- <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/VSCode.png" alt="VSCode" class="skill-icon" />
+                        <span class="skill-name">VSCode</span>
+                    </div> -->
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/Linux.png" alt="Unix/Linux" class="skill-icon" />
+                        <span class="skill-name">Unix/Linux</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/Git.png" alt="Git" class="skill-icon" />
+                        <span class="skill-name">Git</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/Postman.png" alt="Postman" class="skill-icon" />
+                        <span class="skill-name">Postman</span>
+                    </div>
+                    <div class="skill">
+                        <img src="https://stack-icons.showwcase.com/GNUBash.png" alt="Shell scripting" class="skill-icon" />
+                        <span class="skill-name">Shell scripting</span>
+                    </div>
+                    <div class="skill">
+                         
+                        <img src="https://raw.githubusercontent.com/Showwcase/showwcase-icons/926e0fbc12ce80b52031eb6409f20b63972dfc7e/src/solid/github.svg" alt="Github" class="skill-icon" />
+                        <span class="skill-name">Github</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="section" style="margin-top: -30px;">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="path/to/literature-research-image.jpg" alt="Literature Research Web Application">
+                            <div class="view-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Literature Research Web Application</h3>
+                            <p>Python, Flask, BeautifulSoup, SQLite, HTML/CSS, JavaScript</p>
+                            <div class="view-code">
+                                <a href="https://github.com/your-repo/literature-research" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/ai-sys-design.png" alt="AI Based System Design Builder">
+                            <div class="view-icon" onclick="window.open('assets/ai-sys-design.png', '_blank')">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>AI Based System Design Builder</h3>
+                            <p>NVIDIA AI Workbench, Python, React, Node.js, MongoDB</p>
+                            <div class="view-code">
+                                <a href="https://github.com/yddesai/AI-based-System-Design-Builder" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/gitllama.png" alt="GitLlama: AI-Powered Git Repository Assistant">
+                            <div class="view-icon" onclick="window.open('path/to/gitllama-image.jpg', '_blank')">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>GitLlama: AI-Powered Git Repository Assistant</h3>
+                            <p>React, Flask, Together AI, Pinecone, Git, Python</p>
+                            <div class="view-code" style="display: flex; gap: 10px;">
+                                <a href="https://github.com/llamagoats/gitllama" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                
+                                <a href="https://lablab.ai/event/llama-impact-hackathon/llamagoats/gitllama" target="_blank">
+                                    <i class="fas fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Publication Section -->
+            <section id="publication" class="section" style="margin-top: -30px;">
+                <h2>Publication</h2>
+                <div class="resume-section">
+                    <h3>Studying Multifaceted Collaboration of OSS developers and its impact on their bug fixing performance</h3>
+                    <p>Asia-Pacific Software Engineering Conference (W) | Data Mining, Software Engineering, Mining Software Repositories</p>
+                    <p>Developers fix bugs through discussions, creating Developer Social Networks (DSN). We extended DSN to Multi-layer DSN (MDSN), achieving a Pearson correlation coefficient of up to 0.74. This MDSN helps identify crucial developers in systems like Eclipse and Netbeans.</p>
+                </div>
+            </section>
+
+            <!-- Resume Section -->
+            <section id="resume" class="section" style="margin-top: -30px;">
+                <h2>Resume</h2>
+                <div class="resume-section">
+                    <div class="resume-content">
+                        <h3><i class="fas fa-file-alt"></i> Download Resume</h3>
+                        <p>You can download my full resume in PDF format below.</p>
+                        <div class="resume-preview">
+                            <iframe src="./pdf/ydesai-resume.pdf" class="resume-preview-pdf"></iframe>
+                        </div>
+                        <a href="./pdf/ydesai-resume.pdf" download class="download-resume-large">
+                            <i class="fas fa-download"></i> Download PDF Resume
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section">
+                <h2>Get In Touch</h2>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" required placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script src="main.js"></script>
+</body>
 </html>
