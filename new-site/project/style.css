@@ -53,7 +53,10 @@ code, pre {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;*/
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    
+    /*font-family: 'Poppins', sans-serif;*/
     background-color: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.6;
@@ -121,13 +124,34 @@ body {
 
 /* Sidebar Styles */
 .sidebar {
-    width: 280px;
+    width: 300px;
+    min-width: 200px;
+    max-width: 400px;
     background-color: var(--card-bg);
     padding: 2rem;
     position: fixed;
     height: 100%;
     border-right: 1px solid var(--border-color);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    resize: horizontal;
+    overflow: auto;
+}
+
+.resize-handle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    cursor: col-resize;
+    background-color: var(--border-color);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.resize-handle:hover,
+.resize-handle.active {
+    opacity: 0.5;
 }
 
 .profile {
@@ -164,6 +188,8 @@ body {
 
 .contact-info {
     margin: 2rem 0;
+    color: var(--text-primary);
+    font-weight: bold;
 }
 
 .info-item {
@@ -182,7 +208,7 @@ body {
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
     margin-top: 2rem;
 }
 
@@ -190,37 +216,42 @@ body {
     color: var(--text-secondary);
     font-size: 1.5rem;
     transition: var(--transition);
-    padding: 0.5rem;
-    border-radius: 50%;
 }
 
 .social-links a:hover {
     color: var(--accent);
-    background-color: rgba(244, 128, 36, 0.1);
+    transform: translateY(-2px);
 }
 
 /* Main Content Styles */
 .main-content {
-    margin-right: 250px;
-    margin-left: 280px;
+    margin-left: 300px;
     padding: 2rem;
     flex: 1;
     background-color: var(--bg-primary);
+    transition: margin-left 0.3s ease;
+}
+
+.content-container {
+    max-width: 850px;
+    width: 100%;
 }
 
 .nav-bar {
-    margin-bottom: 3rem;
+    width: 100%;
+    margin-bottom: 2.2rem;
     background-color: var(--card-bg);
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 6px;
     border: 1px solid var(--border-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 50px;
 }
 
 .nav-bar ul {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: center;
     width: 100%;
 }
@@ -230,7 +261,7 @@ body {
     text-decoration: none;
     font-weight: 500;
     transition: var(--transition);
-    padding: 0.5rem 1rem;
+    padding: 0.35rem 0.75rem;
     border-radius: 4px;
 }
 
@@ -244,6 +275,8 @@ body {
 .section {
     display: none;
     animation: fadeIn 0.5s ease;
+    text-align: left;
+    font-size: 1.08rem;
 }
 
 .section.active {
@@ -329,7 +362,7 @@ body {
 .skills-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.7rem;
     margin-top: 2rem;
 }
 
@@ -342,7 +375,7 @@ body {
     padding: 0.5rem 1rem;
     border-radius: 20px;
     margin: 0.25rem;
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     border: 1px solid var(--border-color);
     transition: var(--transition);
     max-width: 250px;
@@ -614,6 +647,7 @@ button:hover {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         padding-bottom: 1rem;
+        margin-bottom: 100px;
     }
 
     .github-contributions {
@@ -632,6 +666,7 @@ button:hover {
     body {
         font-size: 16px;
         line-height: 1.6;
+  
     }
 
     p {
@@ -641,7 +676,7 @@ button:hover {
 
 /* Resume Section Styles */
 .resume-content {
-    text-align: center;
+    text-align: left;
     padding: 2rem;
 }
 
@@ -753,6 +788,8 @@ button:hover {
     padding: 1rem;
     background-color: var(--card-bg);
     border-radius: 8px;
+    margin-bottom: 200px;
+    
     /* border: 1px solid var(--border-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); */
 }
@@ -764,7 +801,6 @@ button:hover {
     align-items: left;
     gap: 0.5rem;
     width: 100%;
-    /* margin-left: 10%; */
     text-align: left;
     margin-bottom: 1rem;
     color: var(--text-primary)
@@ -775,7 +811,7 @@ button:hover {
 }
 
 .heatmap-container {
-    width: 70%;
+    width: 100%;
     overflow-x: auto;
     padding: 0.5rem;
     border-radius: 4px;
@@ -812,5 +848,5 @@ button:hover {
 
 /* Add zoom out effect to entire site */
 html {
-    zoom: 0.99;
+    zoom: 1.0;
 }
